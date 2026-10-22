@@ -1,40 +1,30 @@
-# WarForge Development Roadmap
+# WarForge roadmap
 
-## Phase 0 — Repository and project setup
-- [x] Create the initial documentation.
-- [ ] Create the Unity 6 URP project.
-- [ ] Add the project to this Git repository.
-- [ ] Confirm the project opens successfully.
+## Milestone 0.1 (this archive): vertical slice, unverified
+- [ ] Open in Unity 6000.0.23f1, run WarForge > Setup Project, fix any compile errors reported in the Console
+- [ ] Run EditMode tests and make them green
+- [ ] Play in Editor: drive, turret aim, third person, gunner sight, fire, hit a target, win/lose a mission
+- [ ] Build debug APK, sideload, test touch controls on a real phone (stick, aim drag, buttons)
+- [ ] Verify URP materials render on device; add shaders to Always Included if needed
 
-## Phase 1 — Playable tank prototype
-- [ ] Create a basic test arena.
-- [ ] Add a controllable tank.
-- [ ] Add a third-person follow camera.
-- [ ] Implement tank movement and turning.
-- [ ] Implement turret rotation and aiming.
-- [ ] Implement projectile firing.
-- [ ] Add a target with simple hit feedback.
-- [ ] Add Android touch controls.
-- [ ] Test an Android build on a device.
+## Milestone 0.2: feel and physics
+- [ ] Tune suspension, track grip, pivot turns, and hill climbing on the arena terrain
+- [ ] Gun stabilisation toggle and turret lag tuning
+- [ ] Ballistic drop display on HUD (range and lead marker)
+- [ ] Ammo rack in turret, separate shell stocks, shell switching penalty
 
-## Phase 2 — Basic combat
-- [ ] Add health and damage.
-- [ ] Add reload timing.
-- [ ] Add a simple enemy target behavior.
-- [ ] Add basic UI for health and aiming.
-- [ ] Improve controls and performance.
+## Milestone 0.3: damage and AI
+- [ ] Module damage visualisation (crew injured, engine smoke, track damage model)
+- [ ] Enemy AI: cover use, hull-down behaviour, retreat at low HP, team coordination
+- [ ] Spaced armor and slope test range for practice
 
-## Phase 3 — First small game loop
-- [ ] Add a simple objective.
-- [ ] Add win and loss conditions.
-- [ ] Add restart and pause options.
-- [ ] Save basic local settings.
+## Milestone 0.4: content
+- [ ] Authored vehicle models (mesh import), turret and barrel rigs, camouflage textures
+- [ ] Second map (forest) and third map (town) using the same ArenaBuilder pattern
+- [ ] Campaign with 10+ missions, garage upgrades with credits
 
-## Later phases — Only after the prototype works
-- Add additional tanks and maps.
-- Improve vehicle physics and damage systems.
-- Investigate aircraft and naval vehicles.
-- Evaluate multiplayer architecture and server costs.
-
-## Release rule
-Do not move to a major new phase until the current phase has been tested and its known issues are documented.
+## Milestone 0.5: polish and performance
+- [ ] Authored audio, engine loops per vehicle, reverb per map
+- [ ] uGUI menus, garage vehicle previews
+- [ ] Mobile profiling: draw calls, particle budgets, quality presets
+- [ ] Aircraft architecture (new VehicleClass and flight controller) when the ground game is solid
